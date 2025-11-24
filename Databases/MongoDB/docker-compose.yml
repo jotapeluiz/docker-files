@@ -1,0 +1,8 @@
+mongo-db:
+    image: mongo
+    volumes:
+      - mongo_db_data:/data/db
+    env_file:
+      - .env
+    ports:
+      - ${DATABASE_PORT}:${DATABASE_PORT}
